@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+p{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: url(https://images.prismic.io/root-food/6a5290c8-4b5b-49e7-a109-080a6da8d613_03_RF_WHAT.jpg?auto=format) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.menu-open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #eee5d2;
+    z-index: 1;
+}
+
+.menu-close{
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #a39b89;
+    z-index: 10;
+}
+
+.menu-open,
+.menu-close{
+    margin: 0.75em;
+    padding: 0.75em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+}
+
+.menu-open p,
+.menu-close p{
+    position: relative;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    z-index: 2;
+}
+
+.menu-item{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #eee5d2;
+    border-left: 1.5px solid rgba(163, 155, 137, 0.35);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left: -1px;
+}
+
+.menu-item-index{
+    height: 100%;
+    padding: 1.5em 0.5em 2em 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #a39b89;
+}
+
+.menu-item-index p:nth-child(2){
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.menu-link{
+    position: absolute;
+    bottom: 2.5%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.menu-item:nth-child(3) .menu-link{
+    bottom: 7.5%;
+}
+
+.menu-link p{
+    position: relative;
+    display: flex;
+    font-size: 200px;
+    font-weight: lighter;
+    transition: all 0.5s;
+}
+
+.menu-link p span{
+    position: relative;
+}
+
+.menu-item .menu-link-main,
+.menu-item .menu-link-hover{
+    transition: all 0.5s;
+}
+
+.menu-link-main p{
+    color: #2c221d;
+}
+
+.menu-item .menu-link-hover{
+    left: 150%;
+    color: rgba(163, 155, 137, 0.35);
+}
+
+.menu-item:hover .menu-link-main{
+    left: -100%;
+}
+
+.menu-item:hover .menu-link-hover{
+    left: 50%;
+}
+
+.menu-img{
+    position: absolute;
+    width: 75%;
+    left: 35%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    transition: 0.5s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-item.menu-opened:hover .menu-img{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media(max-width: 900px){
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu-link{
+        bottom: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .menu-item:nth-child(3) .menu-link{
+        bottom: unset;
+    }
+
+    .menu-link p{
+        font-size: 80px;
+    }
+
+    .meni-link-hover{
+        display: none;
+    }
+
+    .menu-item:hover .menu-link-main{
+        top: 50%;
+        left: 50%;
+
+    }
+
+    .menu-item-index{
+        align-items: center;
+    }
+
+    .menu-item-index p:nth-child(1){
+        padding:  0 0.5em;
+    }
+
+    .menu-img{
+        display: none;
+    }
+}
