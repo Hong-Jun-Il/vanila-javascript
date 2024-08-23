@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    font-size: 40px;
+    border: 1px solid;
+}
+
+.visible{
+    background-color: red;
+}
