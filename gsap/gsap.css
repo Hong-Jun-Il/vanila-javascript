@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+
+.sec{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursor{
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
+
+.cursor-text{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.cursor-text span{
+    position: absolute;
+    left: 50%;
+    transform-origin: 0px 100px;
+}
