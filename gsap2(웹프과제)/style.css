@@ -40,7 +40,7 @@ li {
     color: #fff;
     pointer-events: none;
     z-index: 999999999999;
-    /* display: none; */
+    display: none;
 }
 
 .counter {
@@ -106,7 +106,7 @@ li {
 
 .root {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -138,6 +138,7 @@ li {
 /* main */
 .content {
     display: flex;
+    height: 450px;
 }
 
 aside {
